@@ -1,119 +1,188 @@
 <html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta
+      name="description"
+      content="Can LLMs Detect and Refactor Code Clones? An Empirical Study"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="public/icon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="public/icon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="public/icon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="public/icon/site.webmanifest" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz|Droid+Sans"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" type="text/css" media="all" href="css/inland.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/paper.css" />
+    <script type="text/javascript" src="js/external.js"></script>
+    <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.scrollTo.js"></script>
+    <script type="text/javascript" src="js/template.js"></script>
+    <script type="text/javascript" src="js/backontop.js"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
 
-<head>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8">
-	<meta name="description" content="Can LLMs Detect and Refactor Code Clones? An Empirical Study">
-	<link rel="apple-touch-icon" sizes="180x180" href="public/icon/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="public/icon/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="public/icon/favicon-16x16.png">
-	<link rel="manifest" href="public/icon/site.webmanifest">
-	<link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz|Droid+Sans" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" type="text/css" media="all" href="css/inland.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="stylesheet" type="text/css" href="css/paper.css">
-	<script type="text/javascript" src="js/external.js"></script>
-	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
-	<script type="text/javascript" src="js/jquery.scrollTo.js"></script>
-	<script type="text/javascript" src="js/template.js"></script>
-	<script type="text/javascript" src="js/backontop.js"></script>
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+    <title>Refactoria</title>
+  </head>
 
+  <body>
+    <div id="wrapper960" class="clearfix">
+      <div id="header" class="clearfix">
+        <div id="sitetitle" class="clearfix">
+          <h1><a href="index.html">Refactoria</a></h1>
+        </div>
 
-	<title>Refactoria</title>
-</head>
-
-<body>
-	<div id="wrapper960" class="clearfix">
-		<div id="header" class="clearfix">
-			<div id="sitetitle" class="clearfix">
-				<h1><a href="index.html">Refactoria</a></h1>
-			</div>
-
-			<nav2 id="stickynav">
-				<div class="verticalMenu">
-					<ul id="nav2">
-						<!-- <li><a href="https://retrisma.itch.io/refactoria-demo">Play Demo</a></li> -->
-						<li><a href="#about" class="backontop">About Refactoria</a></li>
-						<li><a href="#contributors" class="backontop">Contributors</a></li>
-					</ul>
-				</div>
-			</nav2>
-		</div>
-		<div id="content" class="clearfix shadow">
-			<div id="main" class="left">
-				<div>
-					<h2 id="about">About Refactoria</h2>
-					<p>
-						Refactoria is a video game that aims to teach university-level computer science
-						students the concepts and skills needed to properly refactor code.
-					</p>
-					<p>
-						Players play as an expert chef with their sidekick Watson the Whiskbot to refactor
-						Watson's instructions into efficient, readable, and easily maintainable code. While
-						making fun recipes like a fried egg burger, tomato soup, and chicken nuggets,
-						players learn better coding etiquette!
-					</p>
-					<p>
-						In each of the 12 levels, players are presented with a code-based puzzle that,
-						although it passes the test cases, contains a variety of code smells. They are
-						then tasked with using refactoring techniques to ensure the code passes one or two
-						other requirements designed to teach better coding practices.
-					</p>
-					<p>
-						Want to play Refactoria? Click on the link below to download for macOS or Windows.
-					</p>
-					<iframe frameborder="0" src="https://itch.io/embed/3442490?linkback=true" width="552" height="167">
-						<a href="https://retrisma.itch.io/refactoria-demo">Refactoria Demo by Retrisma, cengelbart39</a>
-					</iframe>
-				</div>
-				<div>
-					<h2 id="contributors">Contributors</h2>
-					<div class="grid">
-						<div class="grid-elt">
-							<img src="./public/Christopher Engelbart.jpeg" alt="A photo of Christopher Engelbart" width="200"
-								height="200" />
-							<p class="contributor">Christopher Engelbart</p>
-							<p class="role">Programming</p>
-							<a class="social-link" href="https://www.linkedin.com/in/christopherengelbart" rel="external">LinkedIn</a>
-						</div>
-						<div class="grid-elt">
-							<img src="./public/Nerissa Lundquist.jpg" alt="A photo of Nerissa Lundquist" width="200" height="200" />
-							<p class="contributor">Nerissa Lundquist</p>
-							<p class="role">Art & UI</p>
-							<a class="social-link" href="https://www.linkedin.com/in/nerissa-lundquist-6350a223b/"
-								rel="external">LinkedIn</a>
-						</div>
-						<div class="grid-elt">
-							<img src="./public/Stephen Pachucki.jpg" alt="A photo of Stephen Pachucki" width="200" height="200" />
-							<p class="contributor">Stephen Pachucki</p>
-							<p class="role">Puzzle Design</p>
-							<a class="social-link" href="https://www.linkedin.com/in/stephen-pachucki-93395a297/"
-								rel="external">LinkedIn</a>
-						</div>
-						<div class="grid-elt">
-							<img src="./public/David Van Hise.jpg" alt="A photo of David Van Hise" width="200" height="200" />
-							<p class="contributor">David Van Hise</p>
-							<p class="role">Programming</p>
-							<a class="social-link" href="https://www.linkedin.com/in/david-van-hise/" rel="external">LinkedIn</a>
-						</div>
-					</div>
-					<hr class="solid">
-					<div class="grid">
-						<div class="grid-elt">
-							<p class="contributor">Eman Abdullah AlOmar</p>
-							<p class="role">Project Client</p>
-						</div>
-						<div class="grid-elt">
-							<p class="contributor">Aaron Klappholz</p>
-							<p class="role">Project Advisor</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</body>
-
+        <nav2 id="stickynav">
+          <div class="verticalMenu">
+            <ul id="nav2">
+              <li><a href="#about" class="backontop">About Refactoria</a></li>
+              <li>
+                <a href="#contributors" class="backontop">Contributors</a>
+              </li>
+            </ul>
+          </div>
+        </nav2>
+      </div>
+      <div id="content" class="clearfix shadow">
+        <div id="main" class="left">
+          <div>
+            <h2 id="about">About Refactoria</h2>
+            <p>
+              Refactoria is a video game that aims to teach university-level
+              computer science students the concepts and skills needed to
+              properly refactor code.
+            </p>
+            <p>
+              Players play as an expert chef with their sidekick Watson the
+              Whiskbot to refactor Watson's instructions into efficient,
+              readable, and easily maintainable code. While making fun recipes
+              like a fried egg burger, tomato soup, and chicken nuggets, players
+              learn better coding etiquette!
+            </p>
+            <p>
+              In each of the 12 levels, players are presented with a code-based
+              puzzle that, although it passes the test cases, contains a variety
+              of code smells. They are then tasked with using refactoring
+              techniques to ensure the code passes one or two other requirements
+              designed to teach better coding practices.
+            </p>
+            <p>
+              Want to play Refactoria? Click on the link below to download for
+              macOS or Windows.
+            </p>
+            <iframe
+              frameborder="0"
+              src="https://itch.io/embed/3442490"
+              width="552"
+              height="167"
+              ><a href="https://retrisma.itch.io/refactoria-demo"
+                >Refactoria Demo by Retrisma, cengelbart39</a
+              ></iframe
+            >
+          </div>
+          <div>
+            <h2 id="contributors">Contributors</h2>
+            <div class="grid">
+              <div class="grid-elt">
+                <img
+                  src="./public/Christopher Engelbart.jpeg"
+                  alt="A photo of Christopher Engelbart"
+                  width="200"
+                  height="200"
+                />
+                <p class="contributor">Christopher Engelbart</p>
+                <p class="role">Programming</p>
+                <a
+                  class="social-link"
+                  href="https://www.linkedin.com/in/christopherengelbart"
+                  rel="external"
+                  >LinkedIn</a
+                >
+              </div>
+              <div class="grid-elt">
+                <img
+                  src="./public/Nerissa Lundquist.jpg"
+                  alt="A photo of Nerissa Lundquist"
+                  width="200"
+                  height="200"
+                />
+                <p class="contributor">Nerissa Lundquist</p>
+                <p class="role">Art & UI</p>
+                <a
+                  class="social-link"
+                  href="https://www.linkedin.com/in/nerissa-lundquist-6350a223b/"
+                  rel="external"
+                  >LinkedIn</a
+                >
+              </div>
+              <div class="grid-elt">
+                <img
+                  src="./public/Stephen Pachucki.jpg"
+                  alt="A photo of Stephen Pachucki"
+                  width="200"
+                  height="200"
+                />
+                <p class="contributor">Stephen Pachucki</p>
+                <p class="role">Puzzle Design</p>
+                <a
+                  class="social-link"
+                  href="https://www.linkedin.com/in/stephen-pachucki-93395a297/"
+                  rel="external"
+                  >LinkedIn</a
+                >
+              </div>
+              <div class="grid-elt">
+                <img
+                  src="./public/David Van Hise.jpg"
+                  alt="A photo of David Van Hise"
+                  width="200"
+                  height="200"
+                />
+                <p class="contributor">David Van Hise</p>
+                <p class="role">Programming</p>
+                <a
+                  class="social-link"
+                  href="https://www.linkedin.com/in/david-van-hise/"
+                  rel="external"
+                  >LinkedIn</a
+                >
+              </div>
+            </div>
+            <hr class="solid" />
+            <div class="grid">
+              <div class="grid-elt">
+                <p class="contributor">Eman Abdullah AlOmar</p>
+                <p class="role">Project Client</p>
+              </div>
+              <div class="grid-elt">
+                <p class="contributor">Aaron Klappholz</p>
+                <p class="role">Project Advisor</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
