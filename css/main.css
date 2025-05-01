@@ -1,6 +1,6 @@
 .verticalMenu {
   margin: -1% +30% +4.5% -12%;
-  font-size: 1.0em;
+  font-size: 1em;
   color: #979393;
 }
 
@@ -23,7 +23,8 @@
   font-size: 1.1em;
 }
 
-.contributor, .role {
+.contributor,
+.role {
   margin: 0;
   padding: 0;
 }
@@ -73,7 +74,7 @@ hr.solid {
 
 .bibtex {
   border: solid 1px #ccc;
-  background: #F2F2F2;
+  background: #f2f2f2;
   padding: 5px 15px;
   border-radius: 2px;
   font-family: consolas, monospace;
@@ -82,7 +83,7 @@ hr.solid {
 
 .bibtex pre {
   margin: 0;
-  padding: 0
+  padding: 0;
 }
 
 pre[class*="language-"] {
