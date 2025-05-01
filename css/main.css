@@ -29,6 +29,18 @@
   padding: 0;
 }
 
+.screenshot {
+  width: 900;
+  object-fit: contain;
+}
+
+.itch-iframe {
+  border: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 hr.solid {
   border-top: 2px solid #bbb;
   margin-top: 20;
