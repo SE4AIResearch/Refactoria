@@ -146,11 +146,11 @@ td.rotate  div {
   background-color: #efefef;
 }
 
-code {
+/* code {
   background-color: #dedede;
   font: 10pt consolas;
   border: solid 1px #ccc;
-}
+} */
 
 #args td:nth-child(3),
 #args td:nth-child(4) {

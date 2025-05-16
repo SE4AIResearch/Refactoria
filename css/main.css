@@ -98,17 +98,38 @@ hr.solid {
   padding: 0;
 }
 
-pre[class*="language-"] {
-  background: #f8f8f8;
-  /* or your preferred background */
-  box-shadow: none;
-  border-left: none;
+.story-prompt {
+  margin: 0 0 20px 0;
 }
 
-.token {
-  box-shadow: none !important;
+.story-text {
+  font-size: 120%;
+  margin: 0 0 0 0;
 }
 
-code {
-  background-image: none !important;
+.puzzle-header {
+  font-weight: bold;
+  margin: 0 0 0 0;
+}
+
+.puzzle-detail {
+  margin: 0 0 0 0;
+}
+
+.column {
+  float: left;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.left {
+  width: 10%;
+}
+
+.right {
+  width: 90%;
 }

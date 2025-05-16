@@ -1,5 +1,6 @@
 <html>
   <head>
+    <title>Refactoria</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta
       name="description"
@@ -88,6 +89,7 @@
       rel="stylesheet"
       type="text/css"
     />
+    <link rel="stylesheet" type="text/css" href="css/prism.css" />
     <link rel="stylesheet" type="text/css" media="all" href="css/inland.css" />
     <link rel="stylesheet" type="text/css" href="css/main.css" />
     <link rel="stylesheet" type="text/css" href="css/paper.css" />
@@ -96,14 +98,7 @@
     <script type="text/javascript" src="js/jquery.scrollTo.js"></script>
     <script type="text/javascript" src="js/template.js"></script>
     <script type="text/javascript" src="js/backontop.js"></script>
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css"
-      rel="stylesheet"
-    />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
-
-    <title>Refactoria</title>
+    <script type="text/javascript" src="js/prism.js"></script>
   </head>
 
   <body>
@@ -120,6 +115,9 @@
               <li>
                 <a href="#contributors" class="backontop">Contributors</a>
               </li>
+              <li>
+                <a href="#puzzles" class="backontop">Puzzles</a>
+              </li>
               <!-- <li>
                 <a href="#docs" class="backontop">Documentation</a>
               </li> -->
@@ -129,12 +127,12 @@
       </div>
       <div id="content" class="clearfix shadow">
         <div id="main" class="left">
-          <div>
+          <div class="about">
             <h2 id="about">About Refactoria</h2>
             <p>
-              Refactoria is a video game that aims to teach university-level
-              computer science students the concepts and skills needed to
-              properly refactor code.
+              Refactoria is a video game that aims to teach high school and
+              university-level computer science students the concepts and skills
+              needed to properly refactor code.
             </p>
             <p>
               Players play as an expert chef with their sidekick Watson the
@@ -150,8 +148,8 @@
               techniques to ensure the code passes one or two other requirements
               designed to teach better coding practices.
             </p>
-            <img 
-              class="screenshot" 
+            <img
+              class="screenshot"
               src="./public/screenshots/level.png"
               alt="A screenshot of one of Refactoria's levels. On the right two-thirds of the image, is the kitchen. Watson, a light blue whisk robot, stands in the middle surrounded by 3 stations. The kitchen has a door to the pantry, a door to exit, and a delivery window. The current order is one plate of chicken tenders. On the remaing third of the image, is the code edtior with the level's starter code. Above it are also buttons to run, stop, and reset the code, as well as to view the level instructions and refactoring dictionary. At the bottom is the line-number count and placeholder text for the chef's actions."
             />
@@ -177,7 +175,7 @@
               </iframe>
             </div>
           </div>
-          <div>
+          <div class="contributors">
             <h2 id="contributors">Contributors</h2>
             <div class="grid">
               <div class="grid-elt">
@@ -257,180 +255,291 @@
               </div>
             </div>
           </div>
-          <!-- <div>
-            <h2 id="docs">Documentation</h2>
-            <h3>Presentations</h3>
-            <div>
-              <p>
-                Throughout the duration of the project, the team met with
-                Professor AlOmar on a weekly basis with progress updates. Below
-                are links to all of those presentations in chronological order.
-              </p>
-              <ul>
-                <li>
-                  <a
-                    href="https://stevens0-my.sharepoint.com/:p:/g/personal/ealomar_stevens_edu/EZI53phTDxRCqwOj6fYbnokB091xw3muJQ7APgV-bDRcfA"
-                    target="_blank"
-                    >September 18th, 2024</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://stevens0-my.sharepoint.com/:p:/g/personal/ealomar_stevens_edu/ETvQrTCNH0NKqOMKlbuqIYYByacvvCgmUoWM0ROdUiU8vA"
-                    target="_blank"
-                    >September 25th, 2024</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://stevens0-my.sharepoint.com/:p:/g/personal/ealomar_stevens_edu/EXI0Z3NuX49FgQ0bvjBzSrYBO9VazJU9SK_cgk-m4ZTqDQ"
-                    target="_blank"
-                    >October 2nd, 2024</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://stevens0-my.sharepoint.com/:p:/g/personal/ealomar_stevens_edu/EcmBDaySqr1DsE_5x4cC5rIB_62OVziT3Okjh1WVZb4Wbg"
-                    target="_blank"
-                    >October 23rd, 2024</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://stevens0-my.sharepoint.com/:p:/g/personal/ealomar_stevens_edu/EWb16hNel4BPgpZ-epgTTEsBwkFaQVhX7KuHMrD2SffITg"
-                    target="_blank"
-                    >October 30th, 2024</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://stevens0-my.sharepoint.com/:p:/g/personal/ealomar_stevens_edu/EQ-XsGEu68RKkA-AU58_kOYBFzSVwM1nZdHzkeTH5V6U_g?e=oW1b58"
-                    target="_blank"
-                    >November 6th, 2024</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://stevens0-my.sharepoint.com/:p:/g/personal/ealomar_stevens_edu/EWgS3_D2OulOtwo5W_XhG6EBrHSm-xnABmXBgsxsuIEalA?e=9qF3Gh"
-                    target="_blank"
-                    >November 13th, 2024</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://stevens0-my.sharepoint.com/:p:/g/personal/ealomar_stevens_edu/EXMPOp5-yfJFoXsXDUUrunEBsbVjW43cMy0xjUKvTkjaPA"
-                    target="_blank"
-                    >November 20th, 2024</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://stevens0-my.sharepoint.com/:p:/g/personal/ealomar_stevens_edu/EYpf4YMV-cBIoROnSqPKUjMB_QW8peOQfSinpBh2gGjLIw"
-                    target="_blank"
-                    >November 25th, 2024</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://stevens0-my.sharepoint.com/:p:/g/personal/ealomar_stevens_edu/EUuiA28XrUVDipDYnLYGakwBYckhsbB6YFIdbUU_FlUWIA"
-                    target="_blank"
-                    >December 4th, 2024</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://stevens0-my.sharepoint.com/:p:/g/personal/ealomar_stevens_edu/ETjC6_SbH7pLlvJhIO8lNRoBRmHGw3OcvSEXaBEe9NuqvA"
-                    target="_blank"
-                    >December 11th, 2024</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://stevens0-my.sharepoint.com/:p:/g/personal/ealomar_stevens_edu/EbSJ6I9JeWdIs7x7UdrIlj4B3LomqlJlGl9NgvgspC7EGQ"
-                    target="_blank"
-                    >January 29th, 2025</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://stevens0-my.sharepoint.com/:p:/g/personal/ealomar_stevens_edu/EbTyP1GATzFPvO8AoSp1vfoB5i1kYaTwdHYb_2BjPANHrQ"
-                    target="_blank"
-                    >February 5th, 2025</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://stevens0-my.sharepoint.com/:p:/g/personal/ealomar_stevens_edu/ERBNYK4zkGpJpi5hMAAq0i8BM492oPbwEaDnCYAfIV-iQA"
-                    target="_blank"
-                    >February 12th, 2025</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://stevens0-my.sharepoint.com/:p:/g/personal/ealomar_stevens_edu/EXjZCO2u0i9BnXebq9np2CEBznshDa_DHsocfK_cmH2dwA"
-                    target="_blank"
-                    >February 19th, 2025</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://stevens0-my.sharepoint.com/:p:/g/personal/ealomar_stevens_edu/ETSCRn0mWupNmVPjv2JE3kUBO63SXbAn68K3X0YA0Jq__A"
-                    target="_blank"
-                    >February 26th, 2025</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://stevens0-my.sharepoint.com/:p:/g/personal/ealomar_stevens_edu/ERyjWY6O2J5Epz37n0ZD5y0BNWe3sCaVkrMZQPTFrmF0qQ"
-                    target="_blank"
-                    >March 5th, 2025</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://stevens0-my.sharepoint.com/:p:/g/personal/ealomar_stevens_edu/ERp3NC9vDPNAiu_F-to3cKkB1Y4S6NnqeI35w7DgdLBeyA"
-                    target="_blank"
-                    >March 12th, 2025</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://stevens0-my.sharepoint.com/:p:/g/personal/ealomar_stevens_edu/ERWFOjw5I7NAoJ3RujtewzwBdrDHsuKc9-S9r8AnVDf5Cg"
-                    target="_blank"
-                    >March 26th, 2025</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://stevens0-my.sharepoint.com/:p:/g/personal/ealomar_stevens_edu/ETlaFjeKOJBKsPAivdAXt9wB0sx4q4zW5fEmynb6NPy93A"
-                    target="_blank"
-                    >April 2nd, 2025</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://stevens0-my.sharepoint.com/:p:/g/personal/ealomar_stevens_edu/EUg5U3hLLKtIr2gsFFnBh6MBVKTMWqTMWxQnk_q4CHvNnA"
-                    target="_blank"
-                    >April 9th, 2025</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://stevens0-my.sharepoint.com/:p:/g/personal/ealomar_stevens_edu/ERyfZhIgpidJrWeMaHNYAVMBkxZrGzATi2BOXC0LVDS-yA"
-                    target="_blank"
-                    >April 16th, 2025</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://stevens0-my.sharepoint.com/:p:/g/personal/ealomar_stevens_edu/ETTouYRXyKxGqrSFmSC8mAkB3O2pIr4XPp8iYLYV2ZAUnA"
-                    target="_blank"
-                    >April 23rd, 2025</a
-                  >
-                </li>
-              </ul>
+          <div class="puzzles">
+            <h2 id="puzzles">Puzzles</h2>
+            <p>
+              Refactoria features 13 distinct puzzles covering varying code
+              smells and refactoring techniques. This section contains details
+              about each puzzle and can get you started with solving the first
+              puzzle in the game.
+            </p>
+            <div class="puzzle">
+              <h3>Welcome to Refactoria</h3>
+              <div class="story-prompt">
+                <p class="story-text">
+                  Watson, how do you make tomato soup? No, not quite.
+                </p>
+                <strong>
+                  Task: Find the issue with the code, and refactor it to make it
+                  shorter and clearer.
+                </strong>
+              </div>
+              <div class="row">
+                <div class="column left">
+                  <p class="puzzle-header">Constraint</p>
+                </div>
+                <div class="column right">
+                  <p class="puzzle-detail">Maximum of 13 lines of code.</p>
+                </div>
+              </div>
+              <!-- <pre><code class="language-refactoria">
+  GOTO("Pantry")
+  GET("Broth")
+  GOTO("Station 1")
+  PLACE("A", 0)
+  
+  GOTO("Pantry")
+  GET("Tomato")
+  GOTO("Station 1")
+  PLACE("A", 1)
+  
+  ACTIVATE("A")
+  TAKE("A")
+  GOTO("Window")
+  DELIVER()
+              </code></pre> -->
             </div>
-          </div> -->
+            <div class="puzzle">
+              <h3>One Soup Two Soup</h3>
+              <div class="story-prompt">
+                <p class="story-text">
+                  I ask Watson to make me some tomato soup. Next, potato soup.
+                  Right away, I see his instruction set is much larger than it
+                  needs to be.
+                </p>
+                <strong>
+                  Tip: The same code must be used for all orders!
+                </strong>
+              </div>
+              <div class="row">
+                <div class="column left">
+                  <p class="puzzle-header">Constraint</p>
+                </div>
+                <div class="column right">
+                  <p class="puzzle-detail">Maximum of 15 lines of code.</p>
+                </div>
+              </div>
+            </div>
+            <div class="puzzle">
+              <h3>Future Recipes</h3>
+              <div class="story-prompt">
+                <p class="story-text">
+                  The old owner frequently mentioned that he had intended to put
+                  new items on the menu including squash soup (yuck!). That
+                  explains why he decided to leave it in the recipe book, but
+                  that recipe isn’t going to help us now.
+                </p>
+              </div>
+              <div class="row">
+                <div class="column left">
+                  <p class="puzzle-header">Constraint</p>
+                </div>
+                <div class="column right">
+                  <p class="puzzle-detail">Maximum of 15 lines of code.</p>
+                </div>
+              </div>
+            </div>
+            <div class="puzzle">
+              <h3>A Method to the Madness</h3>
+              <div class="story-prompt">
+                <p class="story-text">
+                  A tomato soup craze sweeps the nation. Realizing I can't type
+                  fast enough to keep up, I search for a better solution.
+                </p>
+              </div>
+              <div class="row">
+                <div class="column left">
+                  <p class="puzzle-header">Constraint</p>
+                </div>
+                <div class="column right">
+                  <p class="puzzle-detail">Maximum of 16 lines of code.</p>
+                </div>
+              </div>
+            </div>
+            <div class="puzzle">
+              <h3>R&D: Soup on Soup</h3>
+              <div class="story-prompt">
+                <p class="story-text">
+                  I'm looking to test a new soup on the menu. How about
+                  mushroom? With a glance to the left and right, I scribble it
+                  onto the menu. Now, I just need to teach Watson how to make
+                  it.
+                </p>
+              </div>
+              <div class="row">
+                <div class="column left">
+                  <p class="puzzle-header">Constraint</p>
+                </div>
+                <div class="column right">
+                  <p class="puzzle-detail">Maximum of 16 lines of code.</p>
+                </div>
+              </div>
+            </div>
+            <div class="puzzle">
+              <h3>R&D: All Together Now</h3>
+              <div class="story-prompt">
+                <p class="story-text">
+                  With customers finally pouring in, Watson is super nervous.
+                  Such cowardice has no place in a well-run kitchen: Watson
+                  needs to pull it together. With a click of embarrassment, he
+                  recovers and prepares to execute orders.
+                </p>
+              </div>
+              <div class="row">
+                <div class="column left">
+                  <p class="puzzle-header">Constraint</p>
+                </div>
+                <div class="column right">
+                  <p class="puzzle-detail">Maximum of 20 lines of code.</p>
+                </div>
+              </div>
+            </div>
+            <div class="puzzle">
+              <h3>R&D: One More Soup</h3>
+              <div class="story-prompt">
+                <p class="story-text">
+                  Watson moves in a symphony of slicing and boiling. It nearly
+                  brings a tear to my eye. But our patrons insist on one more
+                  kind of soup. Can he handle it? I scratched down one idea, but
+                  we'll see...
+                </p>
+              </div>
+              <div class="row">
+                <div class="column left">
+                  <p class="puzzle-header">Constraint</p>
+                </div>
+                <div class="column right">
+                  <p class="puzzle-detail">Maximum of 23 lines of code.</p>
+                </div>
+              </div>
+            </div>
+            <div class="puzzle">
+              <h3>Take Two</h3>
+              <div class="story-prompt">
+                <p class="story-text">
+                  "What do you do if someone orders two different kinds of
+                  soup?" I ask. Watson's face tells me that he's feeling bluer
+                  than usual. Oh, boy!
+                </p>
+              </div>
+              <div class="row">
+                <div class="column left">
+                  <p class="puzzle-header">Constraint 1</p>
+                  <p class="puzzle-header">Constraint 2</p>
+                </div>
+                <div class="column right">
+                  <p class="puzzle-detail">Maximum of 24 lines of code.</p>
+                  <p class="puzzle-detail">
+                    All if-statements must have no more than one comparison.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="puzzle">
+              <h3>Build a Burger</h3>
+              <div class="story-prompt">
+                <p class="story-text">
+                  The first time I ask Watson how he makes a burger, he prints
+                  out a main method so long it wrapped around the whole kitchen.
+                  Come now, we can do better than this.
+                </p>
+              </div>
+              <div class="row">
+                <div class="column left">
+                  <p class="puzzle-header">Constraint 1</p>
+                  <p class="puzzle-header">Constraint 2</p>
+                </div>
+                <div class="column right">
+                  <p class="puzzle-detail">Maximum of 32 lines of code.</p>
+                  <p class="puzzle-detail">Use at least 6 methods.</p>
+                </div>
+              </div>
+            </div>
+            <div class="puzzle">
+              <h3>All Over the Place</h3>
+              <div class="story-prompt">
+                <p class="story-text">
+                  Today, Watson, in a rush to cross the kitchen, knocked me onto
+                  the floor. After staggering to my feet, I realize I haven't
+                  been taking advantage of Refactoria's highly configurable
+                  kitchen modules.
+                </p>
+                <strong>
+                  Tip: Click on a station's module to change it.
+                </strong>
+              </div>
+              <div class="row">
+                <div class="column left">
+                  <p class="puzzle-header">Constraint</p>
+                </div>
+                <div class="column right">
+                  <p class="puzzle-detail">Maximum of 19 lines of code.</p>
+                </div>
+              </div>
+            </div>
+            <div class="puzzle">
+              <h3>A Tight Shift</h3>
+              <div class="story-prompt">
+                <p class="story-text">
+                  My heart sinks when I see energy bill at the end of the month.
+                  The horror! And then I find the recipe responsible for this
+                  the bill...
+                </p>
+              </div>
+              <div class="row">
+                <div class="column left">
+                  <p class="puzzle-header">Constraint 1</p>
+                  <p class="puzzle-header">Constraint 2</p>
+                </div>
+                <div class="column right">
+                  <p class="puzzle-detail">Maximum of 20 lines of code.</p>
+                  <p class="puzzle-detail">
+                    The kitchen must have no more than 3 modules.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="puzzle">
+              <h3>Parameter Overload</h3>
+              <div class="story-prompt">
+                <p class="story-text">
+                  The old chef went too far with parameterizing this recipe.
+                  Perhaps I can salvage it.
+                </p>
+              </div>
+              <div class="row">
+                <div class="column left">
+                  <p class="puzzle-header">Constraint 1</p>
+                  <p class="puzzle-header">Constraint 2</p>
+                </div>
+                <div class="column right">
+                  <p class="puzzle-detail">Maximum of 14 lines of code.</p>
+                  <p class="puzzle-detail">
+                    The program cannot contain more than 3 parameters.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="puzzle">
+              <h3>An Industrial Kitchen</h3>
+              <div class="story-prompt">
+                <p class="story-text">
+                  This is it, we're nearly back to full service. I'm proud of
+                  Watson. Without his hard work, we never would have reached
+                  this point. I survey the kitchen and realize that he has an
+                  awful lot on his plate.
+                </p>
+              </div>
+              <div class="row">
+                <div class="column left">
+                  <p class="puzzle-header">Constraint</p>
+                </div>
+                <div class="column right">
+                  <p class="puzzle-detail">Maximum of 2 modules per station.</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
