@@ -1,5 +1,6 @@
 <html>
   <head>
+    <title>Refactoria</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta
       name="description"
@@ -88,6 +89,7 @@
       rel="stylesheet"
       type="text/css"
     />
+    <link rel="stylesheet" type="text/css" href="css/prism.css" />
     <link rel="stylesheet" type="text/css" media="all" href="css/inland.css" />
     <link rel="stylesheet" type="text/css" href="css/main.css" />
     <link rel="stylesheet" type="text/css" href="css/paper.css" />
@@ -96,14 +98,7 @@
     <script type="text/javascript" src="js/jquery.scrollTo.js"></script>
     <script type="text/javascript" src="js/template.js"></script>
     <script type="text/javascript" src="js/backontop.js"></script>
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css"
-      rel="stylesheet"
-    />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
-
-    <title>Refactoria</title>
+    <script type="text/javascript" src="js/prism.js"></script>
   </head>
 
   <body>
@@ -120,6 +115,9 @@
               <li>
                 <a href="#contributors" class="backontop">Contributors</a>
               </li>
+              <li>
+                <a href="#solutions" class="backontop">Puzzle Solutions</a>
+              </li>
               <!-- <li>
                 <a href="#docs" class="backontop">Documentation</a>
               </li> -->
@@ -129,12 +127,12 @@
       </div>
       <div id="content" class="clearfix shadow">
         <div id="main" class="left">
-          <div>
+          <div class="about">
             <h2 id="about">About Refactoria</h2>
             <p>
-              Refactoria is a video game that aims to teach university-level
-              computer science students the concepts and skills needed to
-              properly refactor code.
+              Refactoria is a video game that aims to teach high school and
+              university-level computer science students the concepts and skills
+              needed to properly refactor code.
             </p>
             <p>
               Players play as an expert chef with their sidekick Watson the
@@ -150,8 +148,8 @@
               techniques to ensure the code passes one or two other requirements
               designed to teach better coding practices.
             </p>
-            <img 
-              class="screenshot" 
+            <img
+              class="screenshot"
               src="./public/screenshots/level.png"
               alt="A screenshot of one of Refactoria's levels. On the right two-thirds of the image, is the kitchen. Watson, a light blue whisk robot, stands in the middle surrounded by 3 stations. The kitchen has a door to the pantry, a door to exit, and a delivery window. The current order is one plate of chicken tenders. On the remaing third of the image, is the code edtior with the level's starter code. Above it are also buttons to run, stop, and reset the code, as well as to view the level instructions and refactoring dictionary. At the bottom is the line-number count and placeholder text for the chef's actions."
             />
@@ -177,7 +175,7 @@
               </iframe>
             </div>
           </div>
-          <div>
+          <div class="contributors">
             <h2 id="contributors">Contributors</h2>
             <div class="grid">
               <div class="grid-elt">
@@ -256,6 +254,433 @@
                 <p class="role">Project Advisor</p>
               </div>
             </div>
+          </div>
+          <div class="solutions">
+            <h2 id="solutions">Puzzle Solutions</h2>
+            <p>Need help with a puzzle? Check out the solutions below.</p>
+            <h3>Welcome to Refactoria</h3>
+            <pre><code class="language-refactoria">
+GOTO("Pantry")
+GET("Broth")
+GOTO("Station 1")
+PLACE("A", 0)
+
+GOTO("Pantry")
+GET("Tomato")
+GOTO("Station 1")
+PLACE("A", 1)
+
+ACTIVATE("A")
+TAKE("A")
+GOTO("Window")
+DELIVER()
+            </code></pre>
+            <h3>One Soup Two Soup</h3>
+            <pre><code class="language-refactoria">
+GOTO("Pantry")
+GET("Broth")
+GOTO("Station 1")
+PLACE("A", 0)
+GOTO("Pantry")
+if (orders[0] == "Tomato Soup") {
+  GET("Tomato")
+} else {
+  GET("Potato")
+}
+GOTO("Station 1")
+PLACE("A", 1)
+ACTIVATE("A")
+TAKE("A")
+GOTO("Window")
+DELIVER()
+            </code></pre>
+            <h3>Future Recipes</h3>
+            <pre><code class="language-refactoria">
+GOTO("Pantry")
+GET("Broth")
+GOTO("Station 1")
+PLACE("A", 0)
+GOTO("Pantry")
+if (orders[0] == "Tomato Soup") {
+  GET("Tomato")
+} else {
+  GET("Potato")
+}
+GOTO("Station 1")
+PLACE("A", 1)
+ACTIVATE("A")
+TAKE("A")
+GOTO("Window")
+DELIVER()
+            </code></pre>
+            <h3>A Method to the Madness</h3>
+            <pre><code class="language-refactoria">
+func make_a_tomato_soup() {
+  GOTO("Pantry")
+  GET("Broth")
+  GOTO("Station 1")
+  PLACE("A", 0)
+  GOTO("Pantry")
+  GET("Tomato")
+  GOTO("Station 1")
+  PLACE("A", 1)
+  ACTIVATE("A")
+  TAKE("A")
+  GOTO("Window")
+  DELIVER()
+}
+  
+var i = 0
+while (i < #orders){
+  make_a_tomato_soup()
+  i = i + 1
+}
+            </code></pre>
+            <h3>R&D: Soup on Soup</h3>
+            <pre><code class="language-refactoria">
+GET("Broth")
+GOTO("Station 1")
+PLACE("A", 0)
+GOTO("Pantry")
+if (orders[0] == "Mushroom Soup") {
+  GET("Mushroom")
+} else {
+  GET("Potato")
+}
+GOTO("Station 1")
+PLACE("A", 1)
+ACTIVATE("A")
+TAKE("A")
+GOTO("Window")
+DELIVER()
+            </code></pre>
+            <h3>R&D: All Together Now</h3>
+            <p>
+              This puzzles takes the solution of R&D: Soup on Soup as the
+              starter code. As a result, this solution assumes you used the
+              provided solution.
+            </p>
+            <pre><code class="language-refactoria">
+func make_soup(ingredient) {
+  GOTO("Pantry")
+  GET("Broth")
+  GOTO("Station 1")
+  PLACE("A", 0)
+  GOTO("Pantry")
+  GET(ingredient)
+  GOTO("Station 1")
+  PLACE("A", 1)
+  ACTIVATE("A")
+  TAKE("A")
+  GOTO("Window")
+  DELIVER()
+}
+
+if (orders[0] == "Mushroom Soup") {
+  make_soup("Mushroom")
+} else if (orders[0] == "Tomato Soup") {
+  make_soup("Tomato")
+} else if (orders[0] == "Potato Soup") {
+  make_soup("Potato")
+} else {
+  make_soup("Squash")
+}
+            </code></pre>
+            <h3>R&D: One More Soup</h3>
+            <p>
+              This puzzles takes the solution of R&D: All Together Now as the
+              starter code. As a result, this solution assumes you used the
+              provided solution.
+            </p>
+            <pre><code class="language-refactoria">
+func make_soup(ingredient) {
+  GOTO("Pantry")
+  GET("Broth")
+  GOTO("Station 1")
+  PLACE("A", 0)
+  GOTO("Pantry")
+  GET(ingredient)
+  GOTO("Station 1")
+  PLACE("A", 1)
+  ACTIVATE("A")
+  TAKE("A")
+  GOTO("Window")
+  DELIVER()
+}
+
+func take_order(order) {
+  if (order == "Corn Soup") {
+    make_soup("Corn")
+  } else if (order == "Mushroom Soup") {
+    make_soup("Mushroom")
+  } else if (order == "Tomato Soup") {
+    make_soup("Tomato")
+  } else if (order == "Potato Soup") {
+    make_soup("Potato")
+  } else {
+    make_soup("Squash")
+  }
+}
+
+take_order(orders[0])
+            </code></pre>
+            <h3>Take Two</h3>
+            <pre><code class="language-refactoria">
+func make_soup(ingredient) {
+  GOTO("Pantry")
+  GET("Broth")
+  GOTO("Station 1")
+  PLACE("A", 0)
+  GOTO("Pantry")
+  GET(ingredient)
+  GOTO("Station 1")
+  PLACE("A", 1)
+  ACTIVATE("A")
+  TAKE("A")
+  GOTO("Window")
+  DELIVER()
+}
+  
+func take_order(order) {
+  if (order == "Tomato Soup") {
+    make_soup("Tomato")
+  } else {
+    make_soup("Potato")
+  }
+}
+  
+var i = 0
+while (i < #orders) {
+  take_order(orders[i])
+  i = i + 1
+}
+            </code></pre>
+            <h3>Build a Burger</h3>
+            <pre><code class="language-refactoria">
+func complete(take_from, put) {
+  ACTIVATE("A")
+  TAKE("A")
+  GOTO("Station 4")
+  PLACE("A", put)
+}
+  
+func prep_bread(end_slot) {
+  GOTO("Pantry")
+  GET("Loaf of Bread")
+  GOTO("Station 1")
+  PLACE("A", 0)
+  complete(1, end_slot)
+}
+  
+func fill_part(ingredient, slot) {
+  GOTO("Pantry")
+  GET(ingredient)
+  GOTO("Station 2")
+  PLACE("A", slot)
+}
+  
+func BBQ() {
+  fill_part("Tomato", 0)
+  fill_part("Sugar", 1)
+  fill_part("Vinegar", 2)
+  complete(3, 1)
+}
+            </code></pre>
+            <h3>All Over the Place</h3>
+            <p>The below solution moves Station 2A to Station 1C.</p>
+            <pre><code class="language-refactoria">
+func prep_bread() {
+  GOTO("Pantry")
+  GET("Loaf of Bread")
+  GOTO("Station 1")
+  PLACE("A", 0)
+  ACTIVATE("A")
+  TAKE("A")
+  PLACE("C", 1)
+}
+
+func prep_chicken() {
+  GOTO("Pantry")
+  GET("Raw Chicken")
+  GOTO("Station 1")
+  PLACE("B", 0)
+  ACTIVATE("B")
+  TAKE("B")
+  PLACE("C", 0)
+}
+
+prep_bread()
+prep_chicken()
+
+ACTIVATE("C")
+TAKE("C")
+GOTO("Window")
+DELIVER()
+            </code></pre>
+            <h3>A Tight Shift</h3>
+            <p>All modules in Station 2 have been removed in this solution.</p>
+            <pre><code class="language-refactoria">
+func prep_bread() {
+  GOTO("Pantry")
+  GET("Loaf of Bread")
+  GOTO("Station 1")
+  PLACE("A", 0)
+  ACTIVATE("A")
+  TAKE("A")
+  PLACE("C", 1)
+}
+  
+func prep_chicken() {
+  GOTO("Pantry")
+  GET("Raw Chicken")
+  GOTO("Station 1")
+  PLACE("B", 0)
+  ACTIVATE("B")
+  TAKE("B")
+  PLACE("C", 0)
+}
+  
+prep_bread()
+prep_chicken()
+  
+ACTIVATE("C")
+TAKE("C")
+GOTO("Window")
+DELIVER()
+            </code></pre>
+            <h3>Parameter Overload</h3>
+            <pre><code class="language-refactoria">
+func prep_ing(ing, mod, ing_slot) {
+  GOTO("Pantry")
+  GET(ing)
+  GOTO("Station 1")
+  PLACE(mod, 0)
+  ACTIVATE(mod)
+  TAKE(mod)
+  PLACE("C", ing_slot) }
+
+func end_protocol() {
+  ACTIVATE("C")
+  TAKE("C")
+  GOTO("Window")
+  DELIVER()
+}
+
+prep_ing("Loaf of Bread", "A", 1)
+prep_ing("Raw Chicken", "B", 0)
+
+end_protocol()
+                
+            </code></pre>
+            <h3>An Industrial Kitchen</h3>
+            <p>This solution moves Station 1C to 3A and Station 2B to 3B.</p>
+            <pre><code class="language-refactoria">
+func pre_proc(ing, sta, mod) {
+  GOTO("Pantry")
+  GET(ing)
+  GOTO(sta)
+  PLACE(mod, 0)
+  ACTIVATE(mod)
+  TAKE(mod)
+}
+
+func bbq_sauce() {
+  GOTO("Pantry")
+  GET("Tomato")
+  GOTO("Station 3")
+  PLACE("A", 0)
+  GOTO("Pantry")
+  GET("Sugar")
+  GOTO("Station 3")
+  PLACE("A", 1)
+  GOTO("Pantry")
+  GET("Vinegar")
+  GOTO("Station 3")
+  PLACE("A", 2)
+  ACTIVATE("A")
+  TAKE("A")
+  GOTO("Station 2")
+  PLACE("A", 1)
+}
+
+func burg_meat() {
+  GOTO("Pantry")
+  GET("Raw Beef")
+  GOTO("Station 1")
+  PLACE("B", 0)
+  ACTIVATE("B")
+  TAKE("B")
+  GOTO("Station 2")
+  PLACE("A", 2) }
+
+func fried_egg() {
+  GOTO("Pantry")
+  GET("Egg")
+  GOTO("Station 3")
+  PLACE("B", 0)
+  GOTO("Pantry")
+  GET("Pepper")
+  GOTO("Station 3")
+  PLACE("B", 1)
+  ACTIVATE("B")
+  TAKE("B")
+  GOTO("Station 2")
+  PLACE("A", 1)
+}
+
+func tenders() {
+  pre_proc("Loaf of Bread", "Station 1", "A")
+  GOTO("Station 2")
+  PLACE("C", 1)
+  pre_proc("Raw Chicken", "Station 1", "B")
+  GOTO("Station 2")
+  PLACE("C", 0)
+  ACTIVATE("C")
+  TAKE("C")
+}
+  
+func take_order(order) {
+  if (order == "Chicken Tenders") {
+    tenders()
+    GOTO("Window")
+    DELIVER()
+
+  } else if (order == "Fried Egg Burger") {
+    pre_proc("Loaf of Bread", "Station 1", "A")
+    GOTO("Station 2")
+    PLACE("A", 0)
+    pre_proc("Loaf of Bread", "Station 1", "A")
+    GOTO("Station 2")
+    PLACE("A", 3)
+    burg_meat()
+    fried_egg()
+    ACTIVATE("A")
+    TAKE("A")
+    GOTO("Window")
+    DELIVER()
+
+  } else {
+    pre_proc("Loaf of Bread", "Station 1", "A")
+    GOTO("Station 2")
+    PLACE("A", 0)
+    pre_proc("Loaf of Bread", "Station 1", "A")
+    GOTO("Station 2")
+    PLACE("A", 3)
+    burg_meat()
+    bbq_sauce()
+    ACTIVATE("A")
+    TAKE("A")
+    GOTO("Window")
+    DELIVER()
+  }
+}
+
+var i = 0
+while (i < #orders) {
+  take_order(orders[i])
+  i = i + 1
+}
+            </code></pre>
           </div>
           <!-- <div>
             <h2 id="docs">Documentation</h2>

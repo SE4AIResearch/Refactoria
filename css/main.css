@@ -98,9 +98,8 @@ hr.solid {
   padding: 0;
 }
 
-pre[class*="language-"] {
+/* pre[class*="language-"] {
   background: #f8f8f8;
-  /* or your preferred background */
   box-shadow: none;
   border-left: none;
 }
@@ -111,4 +110,4 @@ pre[class*="language-"] {
 
 code {
   background-image: none !important;
-}
+} */
